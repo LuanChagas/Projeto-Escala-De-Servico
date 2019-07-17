@@ -1,10 +1,18 @@
 package Aplicacao;
 
+import Tela.View;
+
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello world");
-
+		
+		
+		View Tela = new View();
+		Tela.MostrarInicio();
+		Tela.MostrarTela();
+		
+		
+		
 	}
 
 }
