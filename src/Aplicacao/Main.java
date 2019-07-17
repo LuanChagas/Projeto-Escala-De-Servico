@@ -1,5 +1,6 @@
 package Aplicacao;
 
+import Modelo.Escala;
 import Tela.View;
 
 public class Main {
@@ -8,8 +9,9 @@ public class Main {
 		
 		
 		View Tela = new View();
-		Tela.MostrarInicio();
-		Tela.MostrarTela();
+		Escala escala = Tela.MostrarInicio();
+		Tela.setEscala(escala);
+		Tela.MostrarTela(escala);
 		
 		
 		

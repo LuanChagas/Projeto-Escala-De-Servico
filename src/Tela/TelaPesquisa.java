@@ -2,10 +2,14 @@ package Tela;
 
 import java.util.Scanner;
 
+import Modelo.Escala;
+
 public class TelaPesquisa {
 											private	final Scanner sc = new Scanner(System.in);
 	
-	public void TelaPesquisa() {
+		
+											
+	public void TelaPesquisa(Escala escala) {
 		
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
@@ -50,11 +54,12 @@ public class TelaPesquisa {
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 *********************************************************************************");
 		 int opcao = sc.nextInt();
-		 TransicaoTelaPesquisa(opcao);
+		 TransicaoTelaPesquisa(opcao,escala);
 	}
 
-	public void TransicaoTelaPesquisa(int opcao) {
+	public void TransicaoTelaPesquisa(int opcao,Escala escala) {
 		View view = new View();
+		Escala MinhaEscala = escala;
 		switch (opcao) {
 		case 1 : 
 			PesquisaDia();
@@ -69,7 +74,7 @@ public class TelaPesquisa {
 			break;
 		
 		case 4 : 
-			view.MostrarTela();
+			view.MostrarTela(MinhaEscala);
 			break;
 		}
 	}

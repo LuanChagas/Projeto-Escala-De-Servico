@@ -1,7 +1,8 @@
 package Tela;
 
-import java.io.InputStream;
 import java.util.Scanner;
+
+import Modelo.Escala;
 
 public class View {
 	private final Scanner sc = new Scanner(System.in);
@@ -11,21 +12,33 @@ public class View {
 	private TelaPesquisa telaPesquisa;
 	private TelaEditar telaEditar;
 
+	private Escala MinhaEscala;
+
 	public View() {
 		telaInicial = new TelaInicial();
 		telaPrincipal = new TelaPrincipal();
 		telaPesquisa = new TelaPesquisa();
 		telaEditar = new TelaEditar();
+		Escala MinhaEscala = new Escala();
 	}
-	
-	
-	public void MostrarInicio() {
-		telaInicial.TelaInicial();
+
+	public Escala getEscala() {
+		return MinhaEscala;
 	}
-	
-	public void MostrarTela() {
-		TransicaoPrincipal(telaPrincipal.TelaPrincipal());
-		
+
+	public void setEscala(Escala escala) {
+		this.MinhaEscala = escala;
+	}
+
+	public Escala MostrarInicio() {
+		return telaInicial.TelaInicial();
+
+	}
+
+	public void MostrarTela(Escala escala) {
+		setEscala(escala);
+		TransicaoPrincipal(telaPrincipal.TelaPrincipal(this.MinhaEscala));
+
 	}
 
 	public void LimparTela() {
@@ -37,7 +50,7 @@ public class View {
 	public void TransicaoPrincipal(int opcao) {
 		switch (opcao) {
 		case 1:
-			telaPesquisa.TelaPesquisa();
+			telaPesquisa.TelaPesquisa(MinhaEscala);
 			break;
 		case 2:
 			telaEditar.TelaEditarPrincipal();
@@ -47,7 +60,8 @@ public class View {
 			break;
 		default:
 			System.out.println("NUmero invalido: Tente Novamente");
-			MostrarTela();
+			MostrarTela(getEscala());
+			;
 		}
 	}
 

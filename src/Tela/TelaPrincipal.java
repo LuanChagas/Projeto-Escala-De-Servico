@@ -2,17 +2,20 @@ package Tela;
 
 import java.util.Scanner;
 
+import Modelo.Escala;
+
 public class TelaPrincipal {
 	
 	private	final Scanner sc = new Scanner(System.in);
 	
-	public int TelaPrincipal() {
+	
+	public int TelaPrincipal(Escala escala) {
 		LimparTela();
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
-		System.out.println("                 * *                                                                           * *");
+		System.out.println("                 * *                                                          Escala :  " +escala.getTipo()+"      * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
