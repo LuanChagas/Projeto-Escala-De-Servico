@@ -9,7 +9,7 @@ public class TelaPesquisa {
 	
 		
 											
-	public void TelaPesquisa(Escala escala) {
+	public int TelaPesquisa(Escala escala) {
 		
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
@@ -54,43 +54,14 @@ public class TelaPesquisa {
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 *********************************************************************************");
 		 int opcao = sc.nextInt();
-		 TransicaoTelaPesquisa(opcao,escala);
+		 return opcao;
 	}
 
-	public void TransicaoTelaPesquisa(int opcao,Escala escala) {
-		View view = new View();
-		Escala MinhaEscala = escala;
-		switch (opcao) {
-		case 1 : 
-			PesquisaDia();
-			break;
-		
-		case 2 : 
-			PesquisaMes();
-			break;
-		
-		case 3 : 
-			PesquisaPeriodo();
-			break;
-		
-		case 4 : 
-			view.MostrarTela(MinhaEscala);
-			break;
-		}
+	public int TransicaoTelaPesquisa(int opcao,Escala escala) {
+		return opcao;
+	
 	}
 
-	private void PesquisaPeriodo() {
-		// TODO Auto-generated method stub
-		
-	}
 
-	private void PesquisaMes() {
-		// TODO Auto-generated method stub
-		
-	}
 
-	private void PesquisaDia() {
-		// TODO Auto-generated method stub
-		
-	}
 }

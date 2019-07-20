@@ -12,22 +12,36 @@ public class View {
 	private TelaPesquisa telaPesquisa;
 	private TelaEditar telaEditar;
 
-	private Escala MinhaEscala;
+	
 
 	public View() {
 		telaInicial = new TelaInicial();
 		telaPrincipal = new TelaPrincipal();
 		telaPesquisa = new TelaPesquisa();
 		telaEditar = new TelaEditar();
-		Escala MinhaEscala = new Escala();
+		
 	}
 
-	public Escala getEscala() {
-		return MinhaEscala;
+	public TelaInicial getTelaInicial() {
+		return telaInicial;
 	}
 
-	public void setEscala(Escala escala) {
-		this.MinhaEscala = escala;
+
+
+	public TelaPrincipal getTelaPrincipal() {
+		return telaPrincipal;
+	}
+
+
+
+	public TelaPesquisa getTelaPesquisa() {
+		return telaPesquisa;
+	}
+
+
+
+	public TelaEditar getTelaEditar() {
+		return telaEditar;
 	}
 
 	public Escala MostrarInicio() {
@@ -35,9 +49,8 @@ public class View {
 
 	}
 
-	public void MostrarTela(Escala escala) {
-		setEscala(escala);
-		TransicaoPrincipal(telaPrincipal.TelaPrincipal(this.MinhaEscala));
+	public int MostrarTela(Escala escala) {
+		return telaPrincipal.TelaPrincipal(escala);
 
 	}
 
@@ -47,22 +60,6 @@ public class View {
 		}
 	}
 
-	public void TransicaoPrincipal(int opcao) {
-		switch (opcao) {
-		case 1:
-			telaPesquisa.TelaPesquisa(MinhaEscala);
-			break;
-		case 2:
-			telaEditar.TelaEditarPrincipal();
-			break;
-		case 3:
-			System.out.println("Fechando o programa");
-			break;
-		default:
-			System.out.println("NUmero invalido: Tente Novamente");
-			MostrarTela(getEscala());
-			;
-		}
-	}
-
+	
+	
 }

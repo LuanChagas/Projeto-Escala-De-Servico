@@ -1,5 +1,29 @@
 package Modelo;
 
-public class Escala_D {
+import java.util.Map;
+
+import org.joda.time.DateTime;
+
+public class Escala_D extends Escala{
+
+	public Escala_D() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Escala_D(char tipo, String nome) {
+		super(tipo, nome);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Escala_D(char tipo) {
+		super(tipo);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public Map<DateTime,String> Padrao(){
+		return null;
+	}
 
 }
