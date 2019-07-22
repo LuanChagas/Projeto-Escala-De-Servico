@@ -6,32 +6,19 @@ import org.joda.time.DateTime;
 
 public class Escala {
 
-	private Character Tipo;
+	
 	private String Nome;
 	private Map<DateTime, String> estado;
 
-	public Escala(Character tipo,String nome) {
-		this.Nome = nome;
+	public Escala() {
 		this.estado = Padrao();
-		this.Tipo = tipo;
+		
 	}
 
 	public Escala(String nome) {
 		this.Nome = nome;
 		this.estado = Padrao();
-		this.Tipo = null;
 	}
-
-
-	public char getTipo() {
-		return Tipo;
-	}
-
-	
-	public void setTipo(char tipo) {
-		Tipo = tipo;
-	}
-	
 
 	public String getNome() {
 		return Nome;
@@ -60,7 +47,7 @@ public class Escala {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((Nome == null) ? 0 : Nome.hashCode());
-		result = prime * result + Tipo;
+
 		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
 		return result;
 	}
@@ -80,8 +67,7 @@ public class Escala {
 				return false;
 		} else if (!Nome.equals(other.Nome))
 			return false;
-		if (Tipo != other.Tipo)
-			return false;
+		
 		if (estado == null) {
 			if (other.estado != null)
 				return false;
@@ -90,11 +76,11 @@ public class Escala {
 		return true;
 	}
 
-	
 	@Override
 	public String toString() {
-		return "Escala " + getTipo() + " " + getNome();
+		return "Escala [Nome=" + Nome + ", estado=" + estado + "]";
+	}
 
 	
-	}
+	
 }

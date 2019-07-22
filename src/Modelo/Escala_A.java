@@ -9,21 +9,22 @@ public class Escala_A extends Escala {
 
 	private Character Tipo;
 	
+	public Escala_A() {
+		super();
+		if(super.getNome() == null) {
+			super.setNome("Escala A");
+		}
+	}
+
 	public Escala_A(String nome) {
 		super(nome);
-		this.Tipo = 'A';
-		
+		this.Tipo = 'A';	
 	}
 	
 	public char getTipo() {
 		return Tipo;
 	}
 	
-
-
-
-
-
 	@Override
 	public Map<DateTime, String> Padrao() {
 		Map<DateTime, String> Escala = new TreeMap<DateTime, String>();
@@ -125,10 +126,9 @@ public class Escala_A extends Escala {
 			Escala.put(folga_14, "FOLGA");
 
 			DateTime retorno = dois_1p6.plusDays(2);
-			Escala.put(retorno, "TRABALHANDO");
+			Escala.put(retorno, "TRABALHANDO teste embaixo");
 
-			DateTime folga_15 = retorno.plusDays(1);
-			Escala.put(folga_15, "FOLGA");
+			
 
 			inicio = retorno;
 
@@ -136,5 +136,32 @@ public class Escala_A extends Escala {
 		Escala.entrySet().removeIf(D -> D.getKey().getYear() > 2020);
 		return Escala;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((Tipo == null) ? 0 : Tipo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Escala_A other = (Escala_A) obj;
+		if (Tipo == null) {
+			if (other.Tipo != null)
+				return false;
+		} else if (!Tipo.equals(other.Tipo))
+			return false;
+		return true;
+	}
+	
+	
 
 }
