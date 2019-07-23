@@ -6,7 +6,7 @@ import org.joda.time.DateTime;
 
 public class Escala {
 
-	
+	private Character Tipo;
 	private String Nome;
 	private Map<DateTime, String> estado;
 
@@ -14,10 +14,28 @@ public class Escala {
 		this.estado = Padrao();
 		
 	}
-
+	
 	public Escala(String nome) {
 		this.Nome = nome;
 		this.estado = Padrao();
+	}
+
+	public Escala(char Tipo,String nome) {
+		this.Tipo = Tipo;
+		this.Nome = nome;
+		this.estado = Padrao();
+	}
+	
+	
+	
+	
+	
+	public Character getTipo() {
+		return Tipo;
+	}
+
+	public void setTipo(Character tipo) {
+		Tipo = tipo;
 	}
 
 	public String getNome() {

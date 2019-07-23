@@ -21,7 +21,7 @@ public class Escala_A extends Escala {
 		this.Tipo = 'A';	
 	}
 	
-	public char getTipo() {
+	public Character getTipo() {
 		return Tipo;
 	}
 	

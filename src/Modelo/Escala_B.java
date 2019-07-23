@@ -22,7 +22,7 @@ public class Escala_B extends Escala{
 			this.Tipo = 'B';	
 		}
 		
-		public char getTipo() {
+		public Character getTipo() {
 			return Tipo;
 		}
 	
