@@ -15,7 +15,7 @@ public class TelaPrincipal {
 		System.out.println("                 *********************************************************************************");
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
-		System.out.println("                 * *                                                          Escala :  " +escala.getTipo()+"      * *");
+		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");

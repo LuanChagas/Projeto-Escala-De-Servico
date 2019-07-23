@@ -43,7 +43,7 @@ public class TelaInicial {
 		System.out.print("                  NOME :  ");
 		sc.nextLine();
 		String nome = sc.nextLine();
-		Escala MinhaEscala = new Escala(tipo,nome);
+		Escala MinhaEscala = new Escala(nome);
 		LimparTela();
 		return MinhaEscala;
 		
