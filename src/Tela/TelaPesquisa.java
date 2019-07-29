@@ -11,7 +11,7 @@ public class TelaPesquisa {
 	
 		
 											
-	public int TelaPesquisa(Escala escala) {
+	public int TelaPesquisa() {
 		
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");

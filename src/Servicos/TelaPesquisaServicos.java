@@ -13,16 +13,19 @@ public class TelaPesquisaServicos {
 
 	private final Scanner sc = new Scanner(System.in);
 
+	TelaServicos TelaSer;
+	
 	private Escala EscalaA;
 	private Escala EscalaB;
 	private Escala EscalaC;
 	private Escala EscalaD;
 
-	public TelaPesquisaServicos(Escala escalaA, Escala escalaB, Escala escalaC, Escala escalaD) {
-		this.EscalaA = escalaA;
-		this.EscalaB = escalaB;
-		this.EscalaC = escalaC;
-		this.EscalaD = escalaD;
+	public TelaPesquisaServicos(TelaServicos tela) {
+		this.TelaSer = tela;
+		this.EscalaA = TelaSer.getEscalaA();
+		this.EscalaB = TelaSer.getEscalaB();
+		this.EscalaC = TelaSer.getEscalaC();
+		this.EscalaD = TelaSer.getEscalaD();
 
 	}
 

@@ -49,8 +49,8 @@ public class View {
 
 	}
 
-	public int MostrarTela(Escala escala) {
-		return telaPrincipal.TelaPrincipal(escala);
+	public int MostrarTela() {
+		return telaPrincipal.TelaPrincipal();
 
 	}
 

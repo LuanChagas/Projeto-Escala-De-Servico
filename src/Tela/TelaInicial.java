@@ -89,13 +89,13 @@ public class TelaInicial {
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 *********************************************************************************");
+		sc.nextLine();
 		String nome = sc.nextLine();
 		Escala escala = new Escala_A(nome);
 		return (Escala_A) escala;
 	}
 	
 	public Escala_C NomeandoEscalaC(){
-			
 			System.out.println("\n");
 			System.out.println("                 *********************************************************************************");
 			System.out.println("                 * ***************************************************************************** *");
@@ -109,13 +109,13 @@ public class TelaInicial {
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * ***************************************************************************** *");
 			System.out.println("                 *********************************************************************************");
+			
 			String nome = sc.nextLine();
 			Escala escala = new Escala_C(nome);
 			return (Escala_C) escala;
 		}
 
 	public Escala_D NomeandoEscalaD(){
-		
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
 		System.out.println("                 * ***************************************************************************** *");
@@ -135,7 +135,6 @@ public class TelaInicial {
 	}
 	
 	public Escala_B NomeandoEscalaB(){
-		
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
 		System.out.println("                 * ***************************************************************************** *");

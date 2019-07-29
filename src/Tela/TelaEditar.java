@@ -29,7 +29,7 @@ public class TelaEditar {
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                       *******************************                     * *");
 		System.out.println("                 * *                       *******                 *******                     * *");
-		System.out.println("                 * *                       *** 2 -EDITAR OUTRAS ESCALA ***                     * *");
+		System.out.println("                 * *                       ***2 - NOMEAR OUTRAS ESCALA ***                     * *");
 		System.out.println("                 * *                       *******                 *******                     * *");
 		System.out.println("                 * *                       *******************************                     * *");
 		System.out.println("                 * *                                                                           * *");
@@ -56,4 +56,6 @@ public class TelaEditar {
 		}
 
 }
+	
+	
 }

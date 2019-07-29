@@ -9,7 +9,7 @@ public class TelaPrincipal {
 	private	final Scanner sc = new Scanner(System.in);
 	
 	
-	public int TelaPrincipal(Escala escala) {
+	public int TelaPrincipal() {
 		LimparTela();
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
