@@ -104,7 +104,7 @@ public class TelaEditarServicos {
 	}
 			
 	public char EditarNomesBCD() {
-		
+		char opcao;
 		System.out.println("\n");
 		System.out.println("                 *********************************************************************************");
 		System.out.println("                 * ***************************************************************************** *");
@@ -127,9 +127,15 @@ public class TelaEditarServicos {
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * ***************************************************************************** *");
 		System.out.println("                 *********************************************************************************");
-		
-		char opcao = sc.nextLine().toUpperCase().charAt(0);
+		String Letra = sc.nextLine();
+		String Vazio = "";
+				if(Letra.equals("")) {
+			opcao = 'F';
+			return opcao;
+		}else {
+		 opcao = Letra.toUpperCase().charAt(0);
 		return opcao;
+		}
 }
 	
 	public char EditarNomesACD() {

@@ -152,10 +152,10 @@ public class Main {
 							OpcaoNovoNome = TelaEditSer.EditarNomesBCD();
 							if(OpcaoNovoNome == 'B') {
 								EscalaB.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
-							}
+							}else
 							if(OpcaoNovoNome == 'C') {
 								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
-							}
+							}else
 							if(OpcaoNovoNome == 'D') {
 								EscalaD.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
 							}else
