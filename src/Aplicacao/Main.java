@@ -7,6 +7,7 @@ import Modelo.Escala_A;
 import Modelo.Escala_B;
 import Modelo.Escala_C;
 import Modelo.Escala_D;
+import Servicos.TelaEditarServicos;
 import Servicos.TelaPesquisaServicos;
 import Servicos.TelaServicos;
 import Tela.View;
@@ -24,7 +25,8 @@ public class Main {
 		Escala EscalaC = null;
 		Escala EscalaD = null;
 		TelaServicos TelaServicos = null;
-		TelaPesquisaServicos TelaPesSer = null;
+		
+		TelaEditarServicos TelaEditSer = null;
 		if(Tela.getTelaInicial().NomearEscalas() == 'S') {
 		if (EscalaInicio.getTipo().equals('A')) {
 			EscalaA = new Escala_A();
@@ -119,6 +121,7 @@ public class Main {
 				int opcaoEditar;
 				do {
 					opcaoEditar = Tela.getTelaEditar().TelaEditarPrincipal();
+					TelaEditSer = new TelaEditarServicos(TelaServicos);
 					switch (opcaoEditar) {
 					case 1:
 						Escala NovaEscala = Tela.MostrarInicio();
@@ -136,16 +139,76 @@ public class Main {
 							}else
 							if(NovaEscala.getTipo().equals('C')){
 								MinhaEscala = new Escala_C(NovaEscala.getNome());
-								TelaServicos = new TelaServicos(EscalaA,MinhaEscala, EscalaB, EscalaD);
+								TelaServicos = new TelaServicos(EscalaA,EscalaB,MinhaEscala,  EscalaD);
 							}else
 							if(NovaEscala.getTipo().equals('D')){
 								MinhaEscala = new Escala_D(NovaEscala.getNome());
-								TelaServicos = new TelaServicos(MinhaEscala, EscalaB, EscalaC, EscalaA);
+								TelaServicos = new TelaServicos(EscalaA, EscalaB, EscalaC, MinhaEscala);
 							}
 							break;
 					case 2:
-						System.out.println("EDITAR OUTRAS ESCALAS");
-						
+						char OpcaoNovoNome;
+						if(MinhaEscala.getTipo() == 'A') {
+							OpcaoNovoNome = TelaEditSer.EditarNomesBCD();
+							if(OpcaoNovoNome == 'B') {
+								EscalaB.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'C') {
+								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'D') {
+								EscalaD.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}else
+								System.out.println("OPÇÃO INVALIDA");
+						}else
+						if(MinhaEscala.getTipo() == 'B') {
+							OpcaoNovoNome = TelaEditSer.EditarNomesACD();
+							if(OpcaoNovoNome == 'A') {
+								EscalaA.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'C') {
+								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'D') {
+								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}	
+						}else
+						if(MinhaEscala.getTipo() == 'B') {
+							OpcaoNovoNome = TelaEditSer.EditarNomesACD();
+							if(OpcaoNovoNome == 'A') {
+								EscalaA.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'C') {
+								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'D') {
+								EscalaD.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+						}else 
+						if(MinhaEscala.getTipo() == 'C') {
+							OpcaoNovoNome = TelaEditSer.EditarNomesABD();
+							if(OpcaoNovoNome == 'A') {
+								EscalaA.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'B') {
+								EscalaB.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'D') {
+								EscalaD.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+						}else
+						if(MinhaEscala.getTipo() == 'D') {
+							OpcaoNovoNome = TelaEditSer.EditarNomesABC();
+							if(OpcaoNovoNome == 'A') {
+								EscalaA.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'B') {
+								EscalaB.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+							if(OpcaoNovoNome == 'C') {
+								EscalaC.setNome(TelaEditSer.EditandoNomes(OpcaoNovoNome));
+							}
+						}
 						break;
 					case 3:
 						System.out.println("SAIR");

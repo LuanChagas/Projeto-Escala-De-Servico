@@ -13,16 +13,18 @@ public class TelaEditarServicos {
 	private Escala EscalaC;
 	private Escala EscalaD;
 
-	public TelaEditarServicos(Escala escalaA, Escala escalaB, Escala escalaC, Escala escalaD) {
-		this.EscalaA = escalaA;
-		this.EscalaB = escalaB;
-		this.EscalaC = escalaC;
-		this.EscalaD = escalaD;
+	public TelaEditarServicos(TelaServicos tela) {
+		
+		this.EscalaA = tela.getEscalaA();
+		this.EscalaB = tela.getEscalaB();
+		this.EscalaC = tela.getEscalaC();
+		this.EscalaD = tela.getEscalaD();
 
 	}
 	
-public String EditandoNomes(char opcao) {
+	public String EditandoNomes(char opcao) {
 		
+		String NovoNome = sc.nextLine();
 		switch(opcao) {
 			
 		case 'A' :
@@ -32,18 +34,75 @@ public String EditandoNomes(char opcao) {
 			System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * *                                                                           * *");
-			System.out.println("                                              DIGITE O NOME DA ESCALA A                              ");
+			System.out.println("                                              DIGITE O NOME DA ESCALA A                           ");
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * *                                                                           * *");
 			System.out.println("                 * ***************************************************************************** *");
 			System.out.println("                 *********************************************************************************");
-			sc.nex
+			return NovoNome;
+			
+			
+		case 'B' :
+			System.out.println("\n");
+			System.out.println("                 *********************************************************************************");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                                              DIGITE O NOME DA ESCALA B                           ");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 *********************************************************************************");
+			 NovoNome = sc.nextLine();
+			return NovoNome;
+			
+		case 'C' :
+			System.out.println("\n");
+			System.out.println("                 *********************************************************************************");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                                              DIGITE O NOME DA ESCALA C                           ");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 *********************************************************************************");
+			NovoNome = sc.nextLine();
+			return NovoNome;
+			
+		case 'D' :
+			System.out.println("\n");
+			System.out.println("                 *********************************************************************************");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 * *                           PROJETO ESCALA SERVICO                          * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                                              DIGITE O NOME DA ESCALA D                           ");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * *                                                                           * *");
+			System.out.println("                 * ***************************************************************************** *");
+			System.out.println("                 *********************************************************************************");
+			NovoNome = sc.nextLine();
+			return NovoNome;
+			default:
+				return "Opção Invalida";
+				
 		}
 		
-	}
+		
 	
+	}
+			
 	public char EditarNomesBCD() {
 		
 		System.out.println("\n");
@@ -53,13 +112,13 @@ public String EditandoNomes(char opcao) {
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                                                EDITAR NOME DAS ESCALAS ");
+		System.out.println("                 * *                            DIGITE A LETRA DA ESCALA                       * *");
 		System.out.println("                 * *                                                                           * *");
+		System.out.println("                                		  ESCALA B ("+ EscalaB.getNome() +")");                                                                   
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                            				    ESCALA A = DIGITE B              ");                                                                   
+		System.out.println("                           			  ESCALA C ("+ EscalaC.getNome() +")"              );                                          
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                           			  		    ESCALA B = DIGITE C              ");                                          
-		System.out.println("                 * *                                                                           * *");
-		System.out.println("                         			  		    ESCALA C = DIGITE D              ");                                                                                                    
+		System.out.println("                         			  ESCALA D ("+ EscalaD.getNome() +")"              );                                                                                                    
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
@@ -84,11 +143,11 @@ public String EditandoNomes(char opcao) {
 		System.out.println("                                                EDITAR NOME DAS ESCALAS ");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                            				    ESCALA A = DIGITE A              ");                                                                   
+		System.out.println("                            				    ESCALA A (" + EscalaA.getNome() + ")"             );                                                                   
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                           			  		    ESCALA B = DIGITE C              ");                                          
+		System.out.println("                           			  		    ESCALA C (" + EscalaC.getNome() + ")             ");                                          
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                         			  		    ESCALA C = DIGITE D              ");                                                                                                    
+		System.out.println("                         			  		    ESCALA D (" + EscalaD.getNome() + ")              ");                                                                                                    
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
@@ -113,11 +172,11 @@ public String EditandoNomes(char opcao) {
 		System.out.println("                                                EDITAR NOME DAS ESCALAS ");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                            				    ESCALA A = DIGITE A              ");                                                                   
+		System.out.println("                            				    ESCALA A (" + EscalaA.getNome() + ")              ");                                                                   
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                           			  		    ESCALA B = DIGITE B              ");                                          
+		System.out.println("                           			  		    ESCALA B (" + EscalaB.getNome() + ")             ");                                          
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                         			  		    ESCALA C = DIGITE D              ");                                                                                                    
+		System.out.println("                         			  		    ESCALA D (" + EscalaD.getNome() + ")             ");                                                                                                    
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
@@ -142,11 +201,11 @@ public String EditandoNomes(char opcao) {
 		System.out.println("                                                EDITAR NOME DAS ESCALAS ");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                            				    ESCALA A = DIGITE A              ");                                                                   
+		System.out.println("                            				    ESCALA A (" + EscalaA.getNome() + ")              ");                                                                   
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                           			  		    ESCALA B = DIGITE B              ");                                          
+		System.out.println("                           			  		    ESCALA B (" + EscalaB.getNome() + ")              ");                                          
 		System.out.println("                 * *                                                                           * *");
-		System.out.println("                         			  		    ESCALA C = DIGITE C              ");                                                                                                    
+		System.out.println("                         			  		    ESCALA C (" + EscalaC.getNome() + ")              ");                                                                                                    
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");
 		System.out.println("                 * *                                                                           * *");

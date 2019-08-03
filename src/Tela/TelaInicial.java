@@ -28,7 +28,7 @@ public class TelaInicial {
 		System.out.println("                 *********************************************************************************");
 		System.out.println("\n");
 		System.out.print("                  ESCALA : ");
-		char tipo = sc.next().trim().charAt(0);
+		char tipo = sc.next().toUpperCase().trim().charAt(0);
 		System.out.println("\n");
 		
 		System.out.println("                 *********************************************************************************");
